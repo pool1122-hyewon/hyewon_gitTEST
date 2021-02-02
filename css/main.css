@@ -1,0 +1,420 @@
+@charset 'utf-8';
+@import url('common.css');
+
+
+header{
+    width: 100%; margin: 0 auto;
+    text-align: center;
+    background: white;
+    position:sticky;
+    top: 0;
+    z-index: 111;
+    padding: 20px 0;
+}
+header article{
+    width: 100%;
+    margin: 0 auto;
+
+}
+header article h1{
+    padding: 20px;
+    font-size: 40px;
+}
+header article nav{
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    
+}
+header article nav ul{
+    display: inline-block;
+}
+header article nav ul li{
+    position: relative;
+}
+header article nav ul li ul{
+    display: none;
+    position: absolute; 
+    width: 700px;
+   padding-top: 30px;
+}
+header article nav ul:hover ul{
+    display:flex;
+    background: white;
+    justify-content: space-between;
+}
+header article nav ul ul li img{
+    width: 140px; height: 120px;
+}
+header article nav a{
+    margin: 0 50px;
+    color: rgb(66, 64, 64);   
+    position: relative;
+}
+header article nav a::after{
+    content: '';
+    width: 0%; height: 1px;
+    position: absolute;
+    bottom: 0; left: 0%;
+    background: gray;
+    transition: all 0.5s;
+}
+header article nav a:hover::after{
+    width: 100%;
+}
+header article nav a:hover{
+    color:rgb(149, 144, 144);
+}
+main{margin: 0;}
+.site{
+    position: relative;
+}
+.site .spot{
+    width: 100%; margin: 0 auto;
+}
+.site .spot img{
+    width: 100%;
+    height: 700px;
+    transition:0.7s;
+    transform: translate(0);
+} 
+.site .spot:hover img{
+    transform:translate(-20px,-20px)
+}
+.site .side{
+    position: absolute;
+    width: 3%; right: 5%; top: 60%;
+    position: fixed;
+}
+.site .side img{
+    margin: 5px 0;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+.site .side img:hover{
+    transform: rotate(50deg);
+}
+.site .side p{
+    width: 100%; padding: 15px 5px;
+    background:white; 
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+.site .side p:hover{
+    border: 1px solid #000;
+    background: white; color: gray;
+}
+.site .sec01{
+    width: 70%; margin:150px auto;
+    height: 300px;
+}
+.site .sec01 nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.site .sec01 nav a{
+    margin: 10px;
+    display:block;
+    position: relative;
+}
+.site .sec01 img{
+    width: 300px; height: 400px;
+    display: block;
+}
+.site .sec01 div img{
+    width: 400px; height: 195px;
+    display: block;
+}
+
+
+.site .sec01 nav a:nth-of-type(1):after{
+    position: absolute;
+    width: 100%; height: 100%;
+    content: 'BEDROOM';
+    display:block;
+    background: rgba(0,0,0,0.6);
+    color: white; font-size: 30px;
+    text-align: center; line-height: 350px;
+    transition: .5s;
+    opacity: 0;
+    top: 0;
+}
+.site .sec01 nav div a:nth-of-type(1):after{
+    position: absolute;
+    width: 100%; height: 100%;
+    content: 'OFFICE';
+    display:block; line-height: 200px;
+    background: rgba(0,0,0,0.6);
+    transition: .5s;
+    opacity: 0;
+    top: 0;
+}
+.site .sec01 nav div a:nth-of-type(2):after{
+    position: absolute;
+    width: 100%; height: 100%;
+    content: 'ACC';
+    display:block;
+    line-height: 200px; color: white;
+    font-size: 30px; text-align: center;
+    background: rgba(0,0,0,0.6);
+    transition: .5s;
+    opacity: 0;
+    top: 0;
+}
+.site .sec01 nav a:nth-of-type(2):after{
+    position: absolute;
+    width: 100%; height: 100%;
+    content: 'KITCHEN';
+    display:block;
+    background: rgba(0,0,0,0.6);
+    transition: .5s;
+    opacity: 0;
+    top: 0; text-align: center;
+    color: white; font-size: 30px;
+    line-height: 350px;
+}
+.site .sec01 nav a:hover::after{
+    opacity: 1;
+}
+.site .sec01 nav div a:hover::after{
+    opacity: 1;
+}
+.site .bedroom{
+    width: 100%; margin-top: 250px;
+}
+.site .bedroom .ment01{
+    width: 100%; margin:100px 0;
+    text-align: center;
+    position: relative;
+}
+.site .bedroom .ment01 h4{
+    font-size: 35px;
+}
+.site .bedroom .ment01 p{
+    font-size: 17px;
+    color: gray;
+}
+.site .bedroom .ment01 span{
+    width: 43%; height: 2px;
+    background: rgb(156, 154, 154);
+    display: inline-block;
+    position: absolute;
+    top: 30px; right: 0;
+}
+.site .bedroom .buy01{
+    margin:0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.site .bedroom .buy01 figure{
+    width: 30%; margin: 30px 0;
+}
+.site .bedroom .buy01 figure img{
+    width:85%; height:300px;
+    transition: transform .5s;
+}
+.site .bedroom .buy01 figure:hover img{
+    transform: scale(1.1);
+}
+.site .bedroom .buy01 figure figcaption{
+    margin-top: 15px;
+}
+.site .bedroom .buy01 figure figcaption p{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.site .bedroom .buy01 figure figcaption span{
+    display: block;
+    font-size: 14px;
+    color: rgb(81, 79, 79);
+}
+
+.site .kitchen{
+    width: 100%; margin-top: 130px;
+}
+.site .kitchen .ment02{
+    width: 100%; margin:100px 0;
+    text-align: center;
+    position: relative;
+}
+.site .kitchen .ment02 h4{
+    font-size: 35px;
+}
+.site .kitchen .ment02 p{
+    font-size: 17px;
+    color: gray;
+}
+.site .kitchen .ment02 span{
+    width: 43%; height: 2px;
+    background: rgb(156, 154, 154);
+    display: inline-block;
+    position: absolute;
+    top: 30px; right: 0;
+}
+.site .kitchen .buy02{
+    margin:0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.site .kitchen .buy02 figure{
+    width: 30%; margin: 30px 0;
+}
+.site .kitchen .buy02 figure img{
+    width:85%; height:300px;
+    transition: transform .5s;
+}
+.site .kitchen .buy02 figure:hover img{
+    transform: scale(1.1);
+}
+.site .kitchen .buy02 figure figcaption{
+    margin-top: 15px;
+}
+.site .kitchen .buy02 figure figcaption p{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.site .kitchen .buy02 figure figcaption span{
+    display: block;
+    font-size: 14px;
+    color: rgb(81, 79, 79);
+}
+
+.site .office{
+    width: 100%; margin-top: 130px;
+}
+.site .office .ment03{
+    width: 100%; margin:100px 0;
+    text-align: center;
+    position: relative;
+}
+.site .office .ment03 h4{
+    font-size: 35px;
+}
+.site .office .ment03 p{
+    font-size: 17px;
+    color: gray;
+}
+.site .office .ment03 span{
+    width: 43%; height: 2px;
+    background: rgb(156, 154, 154);
+    display: inline-block;
+    position: absolute;
+    top: 30px; right: 0;
+}
+.site .office .buy03{
+    margin:0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.site .office .buy03 figure{
+    width: 30%; margin: 30px 0;
+}
+.site .office .buy03 figure img{
+    width:85%; height:300px;
+    transition: transform .5s;
+}
+.site .office .buy03 figure:hover img{
+    transform: scale(1.1);
+}
+.site .office .buy03 figure figcaption{
+    margin-top: 15px;
+}
+.site .office .buy03 figure figcaption p{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.site .office .buy03 figure figcaption span{
+    display: block;
+    font-size: 14px;
+    color: rgb(81, 79, 79);
+}
+
+.site .acc{
+    width: 100%; margin-top: 130px;
+}
+.site .acc .ment04{
+    width: 100%; margin:100px 0;
+    text-align: center;
+    position: relative;
+
+}
+.site .acc .ment04 h4{
+    font-size: 35px;
+  
+}
+.site .acc .ment04 p{
+    font-size: 17px;
+    color: rgb(161, 158, 158);
+}
+.site .acc .ment04 span{
+    width: 43%; height: 2px;
+    background: rgb(156, 154, 154);
+    display: inline-block;
+    position: absolute;
+    top: 30px; right: 0;
+}
+.site .acc .buy04{
+    margin:0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.site .acc .buy04 figure{
+    width: 30%; margin: 30px 0;
+}
+.site .acc .buy04 figure img{
+    width:85%; height:300px;
+    transition: transform .5s;
+}
+.site .acc .buy04 figure:hover img{
+    transform: scale(1.1);
+}
+.site .acc .buy04 figure figcaption{
+    margin-top: 15px;
+}
+.site .acc .buy04 figure figcaption p{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.site .acc .buy04 figure figcaption span{
+    display: block;
+    font-size: 14px;
+    color: rgb(81, 79, 79);
+}
+
+footer{
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+}
+footer p{
+    display: inline-block;
+    width: 100%; height: 1px;
+    background-color: gray;
+}
+footer .last{
+    padding-bottom: 20px;
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+footer .last h4{
+    font-size: 20px;
+}
+footer .last span{
+    display: block;
+    font-size: 13px;
+    color: gray;
+}
