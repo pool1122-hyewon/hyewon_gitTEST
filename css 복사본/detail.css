@@ -1,0 +1,211 @@
+@charset 'utf-8';
+@import url('common.css');
+
+
+header{
+    width: 100%; margin: 0 auto;
+    text-align: center;
+    background: white;
+    position:sticky;
+    top: 0;
+    z-index: 111;
+    padding: 20px 0;
+}
+header article{
+    width: 100%;
+    margin: 0 auto;
+
+}
+header article h1{
+    padding: 20px;
+    font-size: 40px;
+}
+header article nav{
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    
+}
+header article nav ul{
+    display: inline-block;
+
+}
+header article nav ul li{
+    position: relative;
+}
+header article nav ul ul{
+    display: none;
+    position: absolute; 
+    width: 70%;
+    padding: 20px 0;
+}
+header article nav ul:hover ul{
+    display:flex;
+    background: white;
+    justify-content: space-between;
+}
+header article nav ul ul li{
+    margin:10px 0;
+    width: 90%;
+}
+header article nav ul ul li a{
+    display:block;
+    width: 100%;
+}
+header article nav ul ul li img{
+    width: 130px; height: 100px;
+}
+header article nav a{
+    margin: 0 50px;
+    color: rgb(66, 64, 64);   
+    position: relative;
+}
+header article nav a::after{
+    content: '';
+    width: 0%; height: 1px;
+    position: absolute;
+    bottom: 0; left: 0%;
+    background: gray;
+    transition: all 0.5s;
+}
+header article nav a:hover::after{
+    width: 100%;
+    color: rgb(161, 157, 157);
+}
+.main{margin: 0;}
+
+.detail{
+    display: flex;
+    justify-content: space-between;
+    width: 80%; margin: 0;
+}
+.detail .sec01{
+    width: 65%;
+    margin-left: 180px;
+}
+.detail .sec01 p{
+    width: 140px; height: 1px;
+    background:black;
+    text-align: center;
+    margin-left: 300px;
+}
+.detail .sec01 span{
+    display:  block;
+    font-size: 40px;
+    text-align: center;
+}
+.detail .sec01 img{
+    margin: 80px 0;
+    transform: translate(0px);
+    transition: 0.5s;
+}
+.detail .sec01 img:hover{
+    transform: translate(-20px,-20px);
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+}
+.detail .sec01 div{
+    padding-right: 80px;
+    width: 60%;
+    display: flex;
+}
+
+.detail .sec02{
+    width: 30%;
+    margin: 70px 20px;
+    position: fixed;
+    background: white;
+    right: 0;
+    
+}
+.detail .sec02 h4{
+    font-size: 20px;
+}
+.detail .sec02 span{
+    display:block;
+    color: rgb(60, 59, 59);
+    margin: 5px 0;
+}
+.detail .sec02 div{
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    width: 100px; 
+}
+.detail .sec02 div button{
+    margin: 5px 0;
+    width: 200px; padding: 10px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative; 
+}
+.detail .sec02 div button::after{
+    content: ' >>';
+    opacity: 0;
+}
+.detail .sec02 div button:hover{
+    padding-right: 55px;
+}
+.detail .sec02 div button:hover:after{
+    content: ' >>';
+    opacity: 1;
+}
+.detail .sec02 div button:nth-of-type(2){
+    background: gray;
+    color: white;
+}
+.detail .side{
+    position: absolute;
+    width: 3%; right: 5%; top: 60%;
+    position: fixed;
+    background: white;
+}
+.detail .side img{
+    margin: 5px 0;
+    border-radius: 10px;
+    transition: transform .5s;
+}
+.detail .side img:hover{
+    transform: rotate(30deg);
+}
+.detail .side p{
+    width: 100%; padding: 15px 5px;
+    background: white;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+.detail .side p a{
+    text-decoration: none;
+}
+.detail .side p:hover{
+    border: 1px solid #000;
+    background: white; color: gray;
+}
+footer{
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+}
+footer p{
+    display: inline-block;
+    width: 100%; height: 1px;
+    background-color: gray;
+}
+footer .last{
+    padding-bottom: 20px;
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+footer .last h4{
+    font-size: 20px;
+}
+footer .last span{
+    display: block;
+    font-size: 13px;
+    color: gray;
+}

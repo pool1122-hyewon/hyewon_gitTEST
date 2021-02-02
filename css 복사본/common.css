@@ -1,0 +1,22 @@
+/* font-family: 'Karla', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;800&display=swap');
+/* font-family: 'Lora', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+html, body{margin:0;}
+p,figure,h1,h2,h3,h4,h5,h6{margin:0;}
+ul,li{list-style: none; margin:0; padding:0;}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+    /* font-family: 'Lora', serif; */
+}
+img{width:100%; vertical-align: top;}
+a{
+    text-decoration: none;
+    color: black;
+}
+input{
+    border: none;
+}
