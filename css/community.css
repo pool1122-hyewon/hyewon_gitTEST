@@ -64,6 +64,31 @@ header article nav a:hover{
     color:rgb(149, 144, 144);
 }
 main{}
+.side{
+    position: absolute;
+    width: 3%; right: 5%; top: 60%;
+    position: fixed;
+}
+.side img{
+    margin: 5px 0;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+.side img:hover{
+    transform: rotate(50deg);
+}
+.side p{
+    width: 100%; padding: 15px 5px;
+    background:white; 
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+.side p:hover{
+    border: 1px solid #000;
+    background: white; color: gray;
+}
 
 .spot{
     margin-top:80px; width: 100%;
