@@ -1,55 +1,50 @@
 @charset 'utf-8';
 @import url('common.css');
 
-
-
-
 header{
-    width: 100%; margin: 0 auto;
-    text-align: center;
-    background: white;
-    position:sticky;
-    top: 0;
-    z-index: 111;
-    padding: 20px 0;
+    width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 5;
 }
 header article{
-    width: 100%;
-    margin: 0 auto;
-
-}
-header article h1{
-    padding: 20px;
-    font-size: 40px;
-}
-header article nav{
-    width: 100%;
-    font-size: 18px;
+    display: flex;
     padding: 10px;
-    
 }
-header article nav ul{
-    display: inline-block;
-}
-header article nav ul li{
-    position: relative;
-}
-header article nav ul li ul{
-    display: none;
-    position: absolute; 
-    width: 700px;
-   padding-top: 30px;
-}
-header article nav ul:hover ul{
-    display:flex;
-    background: white;
-    justify-content: space-between;
-}
-header article nav ul ul li img{
-    width: 140px; height: 120px;
+header article h1{font-size: 25px;}
+header article nav{
+    margin-left: 350px;
 }
 header article nav a{
-    margin: 0 50px;
+    margin-right: 70px;
+    font-size: 18px;
+}
+header article ul{display: inline-block;}
+header article ul li ul{
+    display: none;
+    position: absolute; 
+}
+header article ul li ul li{
+    margin: 20px 0; 
+    position: relative;
+}
+header article ul li ul li::after{
+    content: '';
+    width: 0%; height: 1px;
+    position: absolute;
+    bottom: 0; left: 0%;
+    background: gray;
+    transition: all 0.5s;
+}
+header article ul li ul li:hover::after{width: 100%;}
+header article ul:hover ul{
+    display: block;
+}
+header article.active{
+    background: #fff;
+    margin: 0;
+}
+header article nav a{
     color: rgb(66, 64, 64);   
     position: relative;
 }
@@ -67,343 +62,247 @@ header article nav a:hover::after{
 header article nav a:hover{
     color:rgb(149, 144, 144);
 }
-main{margin: 0;}
-.site{
-    position: relative;
-}
-.site .spot{
-    width: 100%; margin: 0 auto;
-}
-.site .spot img{
+
+
+.all{
+    margin: 0;
     width: 100%;
-    height: 700px;
-    transition:0.7s;
-    transform: translate(0);
-} 
-.site .spot:hover img{
-    transform:translate(-20px,-20px)
 }
-.site .side{
-    position: absolute;
-    width: 3%; right: 5%; top: 60%;
+
+.login{
     position: fixed;
-}
-.site .side img{
-    margin: 5px 0;
-    border-radius: 10px;
-    transition: transform 0.5s;
-}
-.site .side img:hover{
-    transform: rotate(50deg);
-}
-.site .side p{
-    width: 100%; padding: 15px 5px;
-    background:white; 
-    border-radius: 5px;
-    margin-top: 5px;
-    font-size: 14px;
-    text-align: center;
-}
-.site .side p:hover{
-    border: 1px solid #000;
-    background: white; color: gray;
-}
-.site .sec01{
-    width: 70%; margin:150px auto;
-    height: 300px;
-}
-.site .sec01 nav{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+    z-index:99;
+    top: 0; left: 0%;
+    width: 100%; height:100%;
+    display:flex; justify-content: center;
     align-items: center;
+    background:rgba(0,0,0,0.4);
+    display: none;
 }
-.site .sec01 nav a{
-    margin: 10px;
-    display:block;
-    position: relative;
-}
-.site .sec01 img{
-    width: 300px; height: 400px;
-    display: block;
-}
-.site .sec01 div img{
-    width: 400px; height: 195px;
-    display: block;
-}
-
-
-.site .sec01 nav a:nth-of-type(1):after{
-    position: absolute;
-    width: 100%; height: 100%;
-    content: 'BEDROOM';
-    display:block;
-    background: rgba(0,0,0,0.6);
-    color: white; font-size: 30px;
-    text-align: center; line-height: 350px;
-    transition: .5s;
-    opacity: 0;
-    top: 0;
-}
-.site .sec01 nav div a:nth-of-type(1):after{
-    position: absolute;
-    width: 100%; height: 100%;
-    content: 'OFFICE';
-    display:block; line-height: 200px;
-    background: rgba(0,0,0,0.6);
-    transition: .5s;
-    opacity: 0;
-    top: 0;
-}
-.site .sec01 nav div a:nth-of-type(2):after{
-    position: absolute;
-    width: 100%; height: 100%;
-    content: 'ACC';
-    display:block;
-    line-height: 200px; color: white;
-    font-size: 30px; text-align: center;
-    background: rgba(0,0,0,0.6);
-    transition: .5s;
-    opacity: 0;
-    top: 0;
-}
-.site .sec01 nav a:nth-of-type(2):after{
-    position: absolute;
-    width: 100%; height: 100%;
-    content: 'KITCHEN';
-    display:block;
-    background: rgba(0,0,0,0.6);
-    transition: .5s;
-    opacity: 0;
-    top: 0; text-align: center;
-    color: white; font-size: 30px;
-    line-height: 350px;
-}
-.site .sec01 nav a:hover::after{
-    opacity: 1;
-}
-.site .sec01 nav div a:hover::after{
-    opacity: 1;
-}
-.site .bedroom{
-    width: 100%; margin-top: 250px;
-}
-.site .bedroom .ment01{
-    width: 100%; margin:100px 0;
+.login > div{
+    width: 40%; 
     text-align: center;
-    position: relative;
+    border: 1px solid gray;
+    background: #fff;
 }
-.site .bedroom .ment01 h4{
-    font-size: 35px;
+.login .sec01{
+    width: 100%;
 }
-.site .bedroom .ment01 p{
-    font-size: 17px;
-    color: gray;
+.login .sec01 h2{
+    font-size: 30px;
+    margin: 30px 0;
 }
-.site .bedroom .ment01 span{
-    width: 43%; height: 1px;
-    background: #000;
-    display: inline-block;
-    position: absolute;
-    top: 30px; right: 0;
-}
-.site .bedroom .buy01{
-    margin:0 auto;
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.site .bedroom .buy01 figure{
-    width: 30%; margin: 30px 0;
-}
-.site .bedroom .buy01 figure img{
-    width:85%; height:300px;
-    transition: transform .5s;
-}
-.site .bedroom .buy01 figure:hover img{
-    transform: scale(1.1);
-}
-.site .bedroom .buy01 figure figcaption{
-    margin-top: 15px;
-}
-.site .bedroom .buy01 figure figcaption p{
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-.site .bedroom .buy01 figure figcaption span{
-    display: block;
-    font-size: 14px;
-    color: rgb(81, 79, 79);
-}
-
-.site .kitchen{
-    width: 100%; margin-top: 130px;
-}
-.site .kitchen .ment02{
-    width: 100%; margin:100px 0;
+.login .sec01 form{
+    margin: 0 auto;
+    width: 100%;
     text-align: center;
-    position: relative;
 }
-.site .kitchen .ment02 h4{
-    font-size: 35px;
-}
-.site .kitchen .ment02 p{
-    font-size: 17px;
-    color: gray;
-}
-.site .kitchen .ment02 span{
-    width: 43%; height: 1px;
-    background: #000;
-    display: inline-block;
-    position: absolute;
-    top: 30px; right: 0;
-}
-.site .kitchen .buy02{
-    margin:0 auto;
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.site .kitchen .buy02 figure{
-    width: 30%; margin: 30px 0;
-}
-.site .kitchen .buy02 figure img{
-    width:85%; height:300px;
-    transition: transform .5s;
-}
-.site .kitchen .buy02 figure:hover img{
-    transform: scale(1.1);
-}
-.site .kitchen .buy02 figure figcaption{
-    margin-top: 15px;
-}
-.site .kitchen .buy02 figure figcaption p{
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-.site .kitchen .buy02 figure figcaption span{
-    display: block;
-    font-size: 14px;
-    color: rgb(81, 79, 79);
-}
-
-.site .office{
-    width: 100%; margin-top: 130px;
-}
-.site .office .ment03{
-    width: 100%; margin:100px 0;
+.login .sec01 form p{
     text-align: center;
-    position: relative;
+    margin: 10px 0;
 }
-.site .office .ment03 h4{
-    font-size: 35px;
+.login .sec01 form p input{
+    border: 1px solid rgb(162, 161, 161);
+    margin-left: 30px;
+    width: 180px; height: 25px;
 }
-.site .office .ment03 p{
-    font-size: 17px;
-    color: gray;
+.login .sec01 form p:nth-of-type(1) input{
+    margin-left: 100px;
 }
-.site .office .ment03 span{
-    width: 43%; height: 1px;
+.login .sec01 div{
+   width: 100%; margin: 50px 0;
+}
+.login .sec01 div p{
+    font-size: 11px;
+    margin-right: 160px;
+    font-family: 'Karla', sans-serif;
+}
+.login .sec01 div input{
+    border-style: none;
     background: #000;
-    display: inline-block;
-    position: absolute;
-    top: 30px; right: 0;
-}
-.site .office .buy03{
-    margin:0 auto;
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.site .office .buy03 figure{
-    width: 30%; margin: 30px 0;
-}
-.site .office .buy03 figure img{
-    width:85%; height:300px;
-    transition: transform .5s;
-}
-.site .office .buy03 figure:hover img{
-    transform: scale(1.1);
-}
-.site .office .buy03 figure figcaption{
-    margin-top: 15px;
-}
-.site .office .buy03 figure figcaption p{
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-.site .office .buy03 figure figcaption span{
+    color: white;
+    margin: 10px auto;
     display: block;
-    font-size: 14px;
-    color: rgb(81, 79, 79);
+    width: 280px; height: 45px;
+    font-family: 'Karla', sans-serif;
+}
+.login .sec01 div input:nth-of-type(2){
+    background-color: white;
+    color: #000;
+    border: 1px solid#000;
 }
 
-.site .acc{
-    width: 100%; margin-top: 130px;
+.login .sec02{
+    width: 100%;
+    margin: 60px 40px 0 0;
 }
-.site .acc .ment04{
-    width: 100%; margin:100px 0;
+.login .sec02 h2{
+    font-family: 'Karla', sans-serif;
+    font-size: 30px;
+    font-weight:normal;
+    margin-right: 40px;
+}
+.login .sec02 form{
+    margin: 40px 0;
+    width: 100%;
     text-align: center;
-    position: relative;
-
 }
-.site .acc .ment04 h4{
-    font-size: 35px;
-  
+.login .sec02 form p{
+    text-align: center;
+    margin: 10px 0;
 }
-.site .acc .ment04 p{
-    font-size: 17px;
-    color: rgb(161, 158, 158);
+.login .sec02 form input{
+    border: 1px solid rgb(162, 161, 161);
+    margin-left: 30px;
+    width: 180px; height: 25px;
 }
-.site .acc .ment04 span{
-    width: 43%; height: 1px;
+.login .sec02 form p:nth-of-type(1) input{
+    margin-left: 55px;
+}
+.login .sec02 button{
+    border-style: none;
     background: #000;
-    display: inline-block;
-    position: absolute;
-    top: 30px; right: 0;
-}
-.site .acc .buy04{
-    margin:0 auto;
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.site .acc .buy04 figure{
-    width: 30%; margin: 30px 0;
-}
-.site .acc .buy04 figure img{
-    width:85%; height:300px;
-    transition: transform .5s;
-}
-.site .acc .buy04 figure:hover img{
-    transform: scale(1.1);
-}
-.site .acc .buy04 figure figcaption{
-    margin-top: 15px;
-}
-.site .acc .buy04 figure figcaption p{
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-.site .acc .buy04 figure figcaption span{
+    color: white;
+    margin: 65px auto;
     display: block;
-    font-size: 14px;
-    color: rgb(81, 79, 79);
+    width: 300px; height: 45px;
+    font-family: 'Karla', sans-serif;
+}
+
+
+.spot01{
+    width: 100%;
+    height: 100vh;
+}
+
+.spot02{
+    width: 100%;
+    height: 100vh;
+    background: rgb(232, 223, 204);
+    position: relative;
+}
+.spot02 h2{
+    margin-left: 70px;
+    padding: 40px 0;
+    font-size: 30px;
+    color: rgb(106, 96, 96);
+}
+.spot02 .kitimg{
+    position: absolute;
+    margin-left: 70px;
+}
+.spot02 .kitimg img{
+    width: 400px;
+    height: 500px;
+    margin-right: 40px;
+}
+.spot02 .kitimg p{
+    margin-left: 92%;
+    padding: 20px 0;
+}
+.spot02 .kitimg p a{
+    font-size: 20px;
+    color: rgb(106, 96, 96);
+}
+
+.spot03{
+    width: 100%;
+    height: 100vh;
+    background: rgb(198, 196, 194);
+    position: relative;
+}
+.spot03 h2{
+    margin-left: 230px;
+    padding: 40px 0;
+    font-size: 30px;
+    color: rgb(106, 96, 96);
+}
+.spot03 .tabimg{
+    position: absolute;
+    margin-left: 230px;
+    padding:10px 0;
+}
+.spot03 .tabimg img{
+    width: 500px;
+    height: 500px;
+    margin-right: 15px;
+}
+.spot03 .tabimg p{
+    margin-left: 92%;
+    padding: 20px 0;
+}
+.spot03 .tabimg p a{
+    font-size: 18px;
+    color: rgb(106, 96, 96);
+}
+
+.spot04{
+    width: 100%;
+    height: 100vh;
+    background: rgb(33, 56, 78);
+    position: relative;
+}
+.spot04 h2{
+    margin-left: 150px;
+    padding: 40px 0;
+    font-size: 30px;
+    color: #fff;
+}
+.spot04 .bedimg{
+    position: absolute;
+    margin-left: 150px;
+}
+.spot04 .bedimg img{
+    width: 100px;
+}
+.spot04 .bedimg img:nth-of-type(1){
+    width: 550px;
+    height: 500px;
+}
+.spot04 .bedimg p{
+    margin-left: 92%;
+    padding: 20px 0;
+}
+.spot04 .bedimg p a{
+    font-size: 20px;
+    color: #fff;
+}
+
+.spot05{
+    width: 100%;
+    height: 100vh;
+    background: rgb(255, 255, 255);
+    position: relative;
+}
+.spot05 h2{
+    margin-left: 70px;
+    padding: 40px 0;
+    font-size: 30px;
+    color: rgb(106, 96, 96);
+}
+.spot05 .accimg{
+    position: absolute;
+    margin-left: 70px;
+}
+.spot05 .accimg img{
+    width: 400px;
+    height: 400px;
+    margin-right: 40px;
+}
+.spot05 .accimg p{
+    margin-left: 92%;
+    padding: 20px 0;
+}
+.spot05 .accimg p a{
+    font-size: 20px;
+    color: rgb(106, 96, 96);
 }
 
 footer{
     width: 100%;
-    margin-top: 100px;
+    margin-top: 10px;
     text-align: center;
-}
-footer p{
-    display: inline-block;
-    width: 100%; height: 1px;
-    background-color: gray;
+    background: url(../img/spot.jpg);
 }
 footer .last{
     padding-bottom: 20px;
@@ -419,12 +318,4 @@ footer .last span{
     display: block;
     font-size: 13px;
     color: gray;
-}
-@media(max-width:480px){
-    header{width: 100%; height: 30px; padding: 0;}
-    header article h1 a{font-size: 30px;}
-    header nav a{display: block;}
-    .site .sec01{display: none;}
-    .site .side{display: none;}
-    
 }
